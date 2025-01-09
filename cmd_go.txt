@@ -1,4 +1,9 @@
-go get -u github.com/beego/beego/v2
-go install github.com/beego/bee/v2@latest
 
 bee new Beego_Backend
+cd Beego_Backend
+
+go get -u github.com/beego/beego/v2
+go install github.com/beego/bee/v2@latest
+go mod tidy
+
+bee run
