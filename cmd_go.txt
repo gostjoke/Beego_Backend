@@ -6,4 +6,11 @@ go get -u github.com/beego/beego/v2
 go install github.com/beego/bee/v2@latest
 go mod tidy
 
+go get github.com/beego/beego/v2/adapter/orm
+go get -u github.com/go-sql-driver/mysql
+
+if have problem:
+go clean -modcache
+go mod tidy
+
 bee run
