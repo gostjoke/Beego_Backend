@@ -7,5 +7,7 @@ func init() {
 	orm.RegisterModel(
 		new(User),
 		new(Sample),
+		new(Po_table),
+		new(Pn_table),
 	)
 }

@@ -1,7 +1,8 @@
 package main
 
 import (
-	"Beego_Backend/models" // 引用 models 包
+	// 引用 models 包
+	"Beego_Backend/models"
 	_ "Beego_Backend/routers"
 	"fmt"
 
@@ -17,8 +18,8 @@ func init() {
 	// 註冊默認資料庫
 	orm.RegisterDataBase("default", "mysql", "root:ad112345@tcp(127.0.0.1:3306)/Will?charset=utf8&parseTime=True&loc=Local")
 
-	// 自動創建表
-	orm.RunSyncdb("default", false, true)
+	// 自動創建表 only when you need to create table
+	// orm.RunSyncdb("default", false, true)
 }
 
 func main() {
