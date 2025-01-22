@@ -2,9 +2,8 @@ package main
 
 import (
 	// 引用 models 包
-	"Beego_Backend/models"
+
 	_ "Beego_Backend/routers"
-	"fmt"
 
 	"github.com/beego/beego/v2/client/orm"
 	beego "github.com/beego/beego/v2/server/web"
@@ -23,15 +22,15 @@ func init() {
 }
 
 func main() {
-	o := orm.NewOrm()
+	// o := orm.NewOrm()
 
-	// 測試插入資料
-	user := models.User{Name: "Alice", Email: "alice@example.com"}
-	id, err := o.Insert(&user)
-	if err == nil {
-		fmt.Printf("資料插入成功 ID: %d\n", id)
-	} else {
-		fmt.Printf("資料插入失敗: %s\n", err.Error())
-	}
+	// // 測試插入資料
+	// user := models.User{Name: "Alice", Email: "alice@example.com"}
+	// id, err := o.Insert(&user)
+	// if err == nil {
+	// 	fmt.Printf("資料插入成功 ID: %d\n", id)
+	// } else {
+	// 	fmt.Printf("資料插入失敗: %s\n", err.Error())
+	// }
 	beego.Run()
 }
