@@ -16,3 +16,11 @@ type Sample struct {
 	User      *User  `orm:"rel(fk)"`                     // 外鍵，關聯 User 表
 	CreatedAt string `orm:"auto_now_add;type(datetime)"` // 自動填充創建時間
 }
+
+type Task struct {
+	Id        int    `orm:"auto"`                        // 自動遞增主鍵
+	Title     string `orm:"size(200)"`                   // 標題字段
+	Content   string `orm:"type(text)"`                  // 內容字段
+	CreatedAt string `orm:"auto_now_add;type(datetime)"` // 自動填充創建時間
+
+}

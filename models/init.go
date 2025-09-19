@@ -9,5 +9,6 @@ func init() {
 		new(Sample),
 		new(Po_table),
 		new(Pn_table),
+		new(Task),
 	)
 }
