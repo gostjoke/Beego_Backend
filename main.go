@@ -13,16 +13,17 @@ import (
 
 func init() {
 	// 註冊 MySQL 驅動
-	// orm.RegisterDriver("mysql", orm.DRMySQL)
+	orm.RegisterDriver("mysql", orm.DRMySQL)
 	// 註冊 SQLite3 驅動
-	orm.RegisterDriver("sqlite3", orm.DRSqlite)
+	// orm.RegisterDriver("sqlite3", orm.DRSqlite)
 
 	// 註冊默認資料庫
 	// orm.RegisterDataBase("default", "mysql", "root:ad112345@tcp(127.0.0.1:3306)/Will?charset=utf8&parseTime=True&loc=Local")
-	orm.RegisterDataBase("default", "sqlite3", "./data/database.db")
+	orm.RegisterDataBase("default", "mysql", "root:will123@tcp(127.0.0.1:3306)/beegodb?charset=utf8&parseTime=True&loc=Local")
+	// orm.RegisterDataBase("default", "sqlite3", "./data/database.db")
 
 	// 自動創建表 only when you need to create table
-	// orm.RunSyncdb("default", false, true)
+	orm.RunSyncdb("default", false, true) // 第二個參數表示是否強制重新創建表，第三個參數表示是否輸出詳細信息
 }
 
 func main() {

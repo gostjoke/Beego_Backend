@@ -13,5 +13,6 @@ type Pn_table struct {
 	PnNo        string `orm:"size(30)"`  // 名稱字段
 	Description string `orm:"size(100)"` //
 
-	Po_table *Po_table `orm:"rel(fk)"` // 外鍵，關聯到 PO_table
+	Po_table *Po_table `orm:"rel(fk);null;on_delete(do_nothing)"` // 外鍵，關聯到 PO_table
+	// Po_table *Po_table `orm:"rel(fk)"` // 外鍵，關聯到 PO_table
 }
