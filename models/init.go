@@ -12,3 +12,7 @@ func init() {
 		new(Task),
 	)
 }
+
+func (u *User) TableName() string {
+	return "user"
+}

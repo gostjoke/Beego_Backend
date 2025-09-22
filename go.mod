@@ -6,6 +6,8 @@ require github.com/beego/beego/v2 v2.3.4
 
 require (
 	github.com/go-sql-driver/mysql v1.9.3
+	github.com/graphql-go/graphql v0.8.1
+	github.com/graphql-go/handler v0.2.4
 	github.com/mattn/go-sqlite3 v1.14.24
 	github.com/smartystreets/goconvey v1.6.4
 )
