@@ -9,7 +9,7 @@ import (
 func init() {
 	// user routers
 	InitUserRouter()
-
+	InitPoRouter()
 	beego.Router("/", &controllers.MainController{})
 	beego.Router("/items/", &controllers.ItemController{}, "get:Get")
 	beego.Router("/items/:id", &controllers.ItemController{}, "get:GetOne;put:Put;delete:Delete")
